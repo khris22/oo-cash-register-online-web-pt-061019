@@ -1,3 +1,5 @@
+require 'pry'
+
 class CashRegister
   attr_accessor :total, :discount, :items, :last_transaction_amount
 
@@ -17,6 +19,7 @@ class CashRegister
     else
         @items << title
     end
+    binding.pry
     @total += price * quantity
     @last_transaction_amount = @total
     @total
