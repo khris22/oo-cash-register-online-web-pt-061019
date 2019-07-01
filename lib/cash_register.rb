@@ -19,7 +19,7 @@ class CashRegister
     else
         @items << title
     end
-    binding.pry
+    # binding.pry
     @total += price * quantity
     @last_transaction_amount = @total
     @total
@@ -30,6 +30,7 @@ class CashRegister
       # @discount = @discount % 100 returns the remainder
       @discount = @discount/100.to_f
       @total = @total - (total * @discount)
+      binding.pry
       "After the discount, the total comes to $#{@total.to_i}."
     else
       "There is no discount to apply."
